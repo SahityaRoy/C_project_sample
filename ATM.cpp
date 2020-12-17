@@ -1,7 +1,7 @@
 #include <stdio.h>
  
 unsigned long amount=1000, deposit, withdraw;
-int choice, pin, k;
+int choice, pin=0, k;
 
  
 int main()
@@ -31,11 +31,8 @@ int main()
 		case 2:
 			printf("\n ENTER THE AMOUNT TO WITHDRAW: ");
 			scanf("%lu", &withdraw);
-			if (withdraw % 100 != 0)
-			{
-				printf("\n PLEASE ENTER THE AMOUNT IN MULTIPLES OF 100");
-			}
-			else if (withdraw >(amount - 500))
+		
+			if (withdraw >(amount - 500))
 			{
 				printf("\n INSUFFICENT BALANCE");
 			}
